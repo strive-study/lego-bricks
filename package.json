@@ -1,16 +1,16 @@
 {
-  "name": "lego-bricks",
-  "version": "0.1.0",
+  "name": "strive-lego-bricks",
+  "version": "1.0.0",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "npm run clean && npm run build:esm && npm run build:umd",
-    "test:unit": "vue-cli-service test:unit --watch",
-    "lint": "vue-cli-service lint --max-warnings 1",
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint",
     "build:esm": "rollup -c build/rollup.esm.config.js",
     "build:umd": "rollup -c build/rollup.umd.config.js",
     "clean": "rimraf ./dist",
-    "prepublishOnly": "npm run lint && npm run test && npm run build"
+    "prepublishOnly": "npm run lint && npm run test:unit && npm run build"
   },
   "main": "./dist/lego-bricks.umd.js",
   "module": "./dist/lego-bricks.esm.js",
