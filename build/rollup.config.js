@@ -25,5 +25,5 @@ module.exports = {
     css({ output: 'bundle.css' }),
     vue()
   ],
-  external: ['vue', 'lodash-es']
+  external: ['vue']
 }

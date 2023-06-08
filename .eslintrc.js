@@ -22,7 +22,8 @@ module.exports = {
     'vue/multi-word-component-names': 'off',
     'no-undef': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
-    '@typescript-eslint/ban-types': 'off'
+    '@typescript-eslint/ban-types': 'off',
+    'vue/no-deprecated-html-element-is': 'off'
   },
 
   overrides: [

@@ -1,6 +1,6 @@
 {
   "name": "strive-lego-bricks",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -12,8 +12,8 @@
     "clean": "rimraf ./dist",
     "prepublishOnly": "npm run lint && npm run test:unit && npm run build"
   },
-  "main": "./dist/lego-bricks.umd.js",
-  "module": "./dist/lego-bricks.esm.js",
+  "main": "./dist/strive-lego-bricks.umd.js",
+  "module": "./dist/strive-lego-bricks.esm.js",
   "files": [
     "dist"
   ],
@@ -57,5 +57,5 @@
   "peerDependencies": {
     "vue": "^3.2.13"
   },
-  "types": "dist/index.d.ts"
+  "types": "dist/src/index.d.ts"
 }

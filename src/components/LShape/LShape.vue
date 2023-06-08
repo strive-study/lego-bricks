@@ -1,9 +1,8 @@
 <template>
-  <img
+  <div
     :style="styleProps"
-    :src="imageSrc"
     @click.prevent="handleClick"
-    class="l-image-component"
+    class="l-shape-component"
   />
 </template>
 
@@ -11,20 +10,20 @@
 import { defineComponent } from 'vue'
 import useComponentCommon from '@/hooks/useComponentCommon'
 import {
-  imageDefaultProps,
-  imageStylePropsName,
+  shapeDefaultProps,
+  shapeStylePropsName,
   transformToComponentProps
 } from '@/defaultProps'
-const defaultProps = transformToComponentProps(imageDefaultProps)
+const defaultProps = transformToComponentProps(shapeDefaultProps)
 export default defineComponent({
-  name: 'l-image',
+  name: 'l-shape',
   props: {
     ...defaultProps
   },
   setup(props) {
     const { styleProps, handleClick } = useComponentCommon(
       props,
-      imageStylePropsName
+      shapeStylePropsName
     )
     return {
       styleProps,

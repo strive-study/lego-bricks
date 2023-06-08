@@ -41,7 +41,12 @@ export interface TextComponentProps extends CommonComponentProps {
 export interface ImageComponentProps extends CommonComponentProps {
   src: string
 }
-export type AllComponentProps = TextComponentProps & ImageComponentProps
+export interface ShapeComponentProps extends CommonComponentProps {
+  backgroundColor: string
+}
+export type AllComponentProps = TextComponentProps &
+  ImageComponentProps &
+  ShapeComponentProps
 export const commonDefaultProps: CommonComponentProps = {
   // actions
   actionType: '',
@@ -67,7 +72,14 @@ export const commonDefaultProps: CommonComponentProps = {
   top: '0',
   right: '0'
 }
-
+export interface ComponentData {
+  props: { [key: string]: any }
+  id: string
+  name: string
+  layerName?: string
+  isHidden?: boolean
+  isLocked?: boolean
+}
 // 转换成组件props的默认值
 export const textDefaultProps: TextComponentProps = {
   // basic props - font styles
@@ -89,11 +101,33 @@ export const imageDefaultProps: ImageComponentProps = {
   ...commonDefaultProps
 }
 
+export const shapeDefaultProps: ShapeComponentProps = {
+  backgroundColor: '',
+  ...commonDefaultProps
+}
+
 export const isEditingProps = {
   isEditing: {
     type: Boolean,
     default: false
   }
+}
+
+export interface PageData {
+  props: { [key: string]: any }
+  setting: { [key: string]: any }
+  id?: number
+  title?: string
+  desc?: string
+  coverImg?: string
+  uuid?: string
+  latestPublishAt?: string
+  updatedAt?: string
+  isTemplate?: boolean
+  isHot?: boolean
+  isNew?: boolean
+  author?: string
+  status?: string
 }
 
 // 默认props属性 转为 复合vue props格式
@@ -118,4 +152,10 @@ export const textStylePropName = without(
 export const imageStylePropsName = without(
   Object.keys(imageDefaultProps),
   'src'
+)
+
+export const shapeStylePropsName = without(
+  Object.keys(shapeDefaultProps),
+  'actionType',
+  'url'
 )
