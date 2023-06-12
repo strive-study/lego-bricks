@@ -1,7 +1,7 @@
 <template>
   <img
     :style="styleProps"
-    :src="imageSrc"
+    :src="src"
     @click.prevent="handleClick"
     class="l-image-component"
   />

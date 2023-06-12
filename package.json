@@ -1,6 +1,6 @@
 {
   "name": "strive-lego-bricks",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
