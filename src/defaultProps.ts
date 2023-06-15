@@ -53,7 +53,7 @@ export const commonDefaultProps: CommonComponentProps = {
   url: '',
   // size
   height: '',
-  width: '318px',
+  width: '373px',
   paddingLeft: '0px',
   paddingRight: '0px',
   paddingTop: '0px',
@@ -76,9 +76,9 @@ export interface ComponentData {
   props: { [key: string]: any }
   id: string
   name: string
-  layerName?: string
-  isHidden?: boolean
-  isLocked?: boolean
+  layerName?: string //图层名称
+  isHidden?: boolean // 图层隐藏
+  isLocked?: boolean // 图层锁定
 }
 // 转换成组件props的默认值
 export const textDefaultProps: TextComponentProps = {

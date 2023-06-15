@@ -1,6 +1,6 @@
 {
   "name": "strive-lego-bricks",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -57,5 +57,5 @@
   "peerDependencies": {
     "vue": "^3.2.13"
   },
-  "types": "dist/src/index.d.ts"
+  "types": "dist/index.d.ts"
 }

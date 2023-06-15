@@ -9,7 +9,7 @@ const overrides = {
   compilerOptions: {
     declaration: true
   },
-  exclude: ['node_modules']
+  exclude: ['tests/**/*.ts', 'tests/**/*.tsx', 'node_modules']
 }
 module.exports = {
   input: 'src/index.ts',
